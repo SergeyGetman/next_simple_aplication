@@ -1,0 +1,38 @@
+
+
+
+.user__list {
+  height: 1000px;
+  background-color: #1ab81d;
+  font-weight: bold;
+  font-size: large;
+
+
+  &__user {
+
+    color: white;
+    background-color: black;
+
+    &__icon {
+      display: block;
+    }
+
+    & li {
+      display: flex;
+      grid-gap: 10px;
+    }
+
+    & a {
+      text-decoration: none;
+      color: white;
+      background-color: black;
+    }
+
+    & a:hover, li:hover{
+      color: #847e75;
+    }
+
+  }
+
+
+}

@@ -1,0 +1,27 @@
+.user__list {
+  height: 1000px;
+  background-color: #1ab81d;
+  font-weight: bold;
+  font-size: large;
+}
+.user__list__user {
+  color: white;
+  background-color: black;
+}
+.user__list__user__icon {
+  display: block;
+}
+.user__list__user li {
+  display: flex;
+  grid-gap: 10px;
+}
+.user__list__user a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+.user__list__user a:hover, .user__list__user li:hover {
+  color: #847e75;
+}
+
+/*# sourceMappingURL=user.module.css.map */

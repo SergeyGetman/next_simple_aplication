@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4efef;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.form-control{
+    display: flex;
+    justify-content: center;
+}

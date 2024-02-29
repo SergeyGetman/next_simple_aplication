@@ -1,0 +1,33 @@
+.navbar {
+    background-color: #323538;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+
+    color: #fffefe;
+    font-size: 2vh;
+    font-weight: bolder;
+    font-family: "Bell MT";
+    margin: 10px;
+    text-decoration: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+
+.link:hover{
+    color: #928a8e;
+    text-decoration: auto;
+}
+
+.error {
+    text-align: center;
+    font-size: 10vh;
+    margin-top: 15%;
+}
