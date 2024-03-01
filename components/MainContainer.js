@@ -7,7 +7,6 @@ import NavigateLink from "./NavigateLink";
 
 const MainContainer = ({ children, keywords }) => {
   const st = useSelector((state) => console.log("this is state", state));
-  console.log(st);
 
   return (
     <>

@@ -23,4 +23,24 @@
   color: #847e75;
 }
 
+.user__block {
+  background-color: #727070;
+  padding: 10px;
+  margin: 10px;
+}
+.user__block h1 {
+  color: #45b0a8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.user__block__name {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Calibri";
+}
+.user__block__name:hover {
+  color: black;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=user.module.css.map */

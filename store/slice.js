@@ -11,7 +11,6 @@ export const getDataSliceInfo = createSlice({
 
   reducers: {
     addDataUser(state, action) {
-      console.log("this is action", action);
       state.dataAvtorized = action.payload;
     },
     changeStopAvtorized(state, action) {

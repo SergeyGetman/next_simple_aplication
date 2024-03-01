@@ -2,23 +2,18 @@ import { useRouter } from "next/router";
 import MainContainer from "../../components/MainContainer";
 
 export default function PicturesLifeUnique({ newParams }) {
-  console.log("newParams", newParams);
-
   const router = useRouter();
-  console.log("ROUTER", router);
 
   return (
     <>
       <MainContainer>
-        <div>LOL</div>
+        <div>Empty Block</div>
       </MainContainer>
     </>
   );
 }
 
 export async function getServerSideProps({ params }) {
-  console.log("PRAMS", params);
-
   try {
     const newParams = await fetch(
       `https://fakestoreapi.com/products/${params.id}`

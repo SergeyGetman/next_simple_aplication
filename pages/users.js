@@ -5,7 +5,6 @@ import styling from "../style/user.module.css";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
 
 const Users = ({ users }) => {
-  console.log("users ssss", users);
   return (
     <MainContainer keywords={"page users"}>
       <h1>All users</h1>

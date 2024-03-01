@@ -11,8 +11,6 @@ export default function ReactBigCalendar() {
   const [eventsData, setEventsData] = useState(events);
 
   const handleSelect = ({ start, end }) => {
-    console.log(start);
-    console.log(end);
     const title = window.prompt("New Event name");
     if (title)
       setEventsData([
