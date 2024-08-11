@@ -42,7 +42,8 @@
     "sass": "^1.57.1",
     "tui-calendar": "^1.15.3",
     "tui-date-picker": "^4.3.3",
-    "tui-time-picker": "^2.1.6"
+    "tui-time-picker": "^2.1.6",
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
