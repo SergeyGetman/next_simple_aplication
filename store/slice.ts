@@ -1,16 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+interface IDataUserInfo {
+  email: string;
+  password: string;
+}
+
 interface GlobalInfoState {
   name: string;
   DT: any[];
-  dataAvtorized: any[];
+  dataAvtorized: IDataUserInfo;
   avtorizedStop: boolean;
 }
 
 const initialState: GlobalInfoState = {
   name: "",
   DT: [],
-  dataAvtorized: [],
+  dataAvtorized: "",
   avtorizedStop: true,
 };
 

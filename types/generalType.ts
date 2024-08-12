@@ -10,8 +10,8 @@ export interface INavigationLink {
 }
 
 export interface IMainContainer {
-  children: ReactNode;
-  keywords: string;
+  children?: ReactNode;
+  keywords?: string;
 }
 
 export interface AppProps {
@@ -24,9 +24,30 @@ export interface AppProps {
 
 }
 
+interface EventTarget {
+  addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
+  dispatchEvent(evt: Event): boolean;
+  removeEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
+  value: any;
+}
+
+
+
+export interface IEvent {
+  target: EventTarget;
+  e: React.ChangeEvent<HTMLInputElement>;
+  preventDefault(): void;
+  stopPropagation(): void;
+  handleSubmit(): void;
+  handleChangeEmail(): void;
+  handleChangePass(): void;
+  handleChangeEmail(): void;
+}
+
 export interface SyntheticEvent<T> {
 
-  currentTarget: EventTarget & T;
-
+  currentTarget: EventTarget & T | React.ChangeEvent<HTMLInputElement> ;
+  target?: EventTarget;
   preventDefault(): void;
+  stopPropagation(): void;
 }

@@ -16,6 +16,8 @@ import { useRouter } from "next/router";
 import Box from "@mui/material/Box";
 import { RootState } from '../store/reducer';
 import { useTypedSelector } from '../hooks/useTypedSelector';
+import { IEvent, SyntheticEvent } from '../types/generalType';
+
 
 export const Login = () => {
   const paperStyle = {
@@ -33,7 +35,7 @@ export const Login = () => {
 
   const { dataAvtorized } =  useTypedSelector  ((state) => state || []);
 
-  const handleChangeEmail = (event) => {
+  const handleChangeEmail = (event: IEvent) => {
     const { value } = event.target;
     setFormData(() => ({
       ...formData,
@@ -41,7 +43,7 @@ export const Login = () => {
     }));
   };
 
-  const handleChangePass = (event) => {
+  const handleChangePass = (event: IEvent) => {
     const { value } = event.target;
     setFormData(() => ({
       ...formData,
@@ -55,17 +57,17 @@ export const Login = () => {
     }
   }, [dataAvtorized]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: IEvent) => {
     event.preventDefault();
-    dispatch(addDataUser(formData));
-    dispatch(changeStopAvtorized(false));
+    dispatch(addDataUser(formData, event));
+    dispatch(changeStopAvtorized(false, event));
     checkFormData();
   };
 
   return (
     <>
       <Box className="form-control">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={() => handleSubmit}>
           <FormControl>
             <Grid>
               <Paper elevation={10} style={paperStyle}>
@@ -83,7 +85,7 @@ export const Login = () => {
                   fullWidth
                   required
                   value={formData.email}
-                  onChange={handleChangeEmail}
+                  onChange={() => handleChangeEmail}
                 />
                 <TextField
                   sx={{ margin: "5px" }}
@@ -93,7 +95,7 @@ export const Login = () => {
                   fullWidth
                   required
                   value={formData.password}
-                  onChange={handleChangePass}
+                  onChange={() => handleChangePass}
                 />
                 <FormControlLabel
                   control={<Checkbox name="checkedB" color="primary" />}

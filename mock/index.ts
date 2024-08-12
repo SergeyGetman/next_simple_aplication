@@ -1,4 +1,19 @@
-export const MOCK_DATA = [
+import { as } from '@fullcalendar/core/internal-common';
+
+interface DateConstructor {
+  new(): Date;
+
+}
+
+interface MockDataTypes {
+  id: number;
+  title: string;
+  allDay: boolean;
+  start: DateConstructor;
+  end: DateConstructor;
+}
+
+export const MOCK_DATA: MockDataTypes[MockDataTypes] = [
   {
     id: 0,
     title: "All Day Event very long title",

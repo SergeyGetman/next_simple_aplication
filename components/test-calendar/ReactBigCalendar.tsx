@@ -8,7 +8,7 @@ moment.locale("en-GB");
 const localizer = momentLocalizer(moment);
 
 export default function ReactBigCalendar() {
-  const [eventsData, setEventsData] = useState(events);
+  const [eventsData, setEventsData] = useState<any>(events);
 
   const handleSelect = ({ start, end }) => {
     const title = window.prompt("New Event name");
