@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Navbar';
 import { MOCK_blogDetails } from '../mock';
@@ -10,11 +10,6 @@ const Createblog = () => {
   const [imageUrl, setImageUrl] = useState('');
   const initialBlogs = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('myData')) || [] : [];
   const [data, setData] = useState(MOCK_blogDetails);
-
-  // useEffect(() => {
-  //   // Save habits to localStorage whenever they change
-  //   localStorage.setItem('myData', JSON.stringify(data));
-  // }, [data]);
 
   const addData = () => {
     const currentDate = new Date().toLocaleDateString();

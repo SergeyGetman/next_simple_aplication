@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { SxProps, Theme } from '@mui/material/styles';
 
 export interface INavigationLink {
-  text: string;
+  text?: string;
   href: string;
   children?: ReactNode;
   handleClick?: () => void;
@@ -19,9 +19,8 @@ export interface AppProps {
   childrenElement?: React.JSX.Element;
   style?: React.CSSProperties;
   onChange?: React.FormEventHandler<HTMLInputElement>;
-  props?:  React.ComponentPropsWithoutRef<"button">;
+  props?: React.ComponentPropsWithoutRef<'button'>;
   sx?: SxProps<Theme>;
-
 }
 
 interface EventTarget {
@@ -30,8 +29,6 @@ interface EventTarget {
   removeEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
   value: any;
 }
-
-
 
 export interface IEvent {
   target: EventTarget;
@@ -45,8 +42,7 @@ export interface IEvent {
 }
 
 export interface SyntheticEvent<T> {
-
-  currentTarget: EventTarget & T | React.ChangeEvent<HTMLInputElement> ;
+  currentTarget: (EventTarget & T) | React.ChangeEvent<HTMLInputElement>;
   target?: EventTarget;
   preventDefault(): void;
   stopPropagation(): void;

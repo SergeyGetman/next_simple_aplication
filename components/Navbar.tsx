@@ -1,21 +1,17 @@
 import React from 'react';
-import Link from 'next/link';
+import NavigateLink from './NavigateLink';
 
 const Navbar = () => {
   return (
-    <div>
+    <>
       <nav
         className="navbar navbar-expand-lg navbar-light
                 bg-dark bg-opacity-75 fixed-top text-light"
       >
         <div className="container">
-          <Link
-            className="navbar-brand
-                        text-light font-bold"
-            href="/"
-          >
+          <NavigateLink className="navbar-brand text-light font-bold" href="/">
             GFG Blogs
-          </Link>
+          </NavigateLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,28 +26,20 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link
-                  href="/"
-                  className="nav-item nav-link
-                                               text-light"
-                >
+                <NavigateLink href="/" className="nav-item nav-link text-light">
                   Home
-                </Link>
+                </NavigateLink>
               </li>
               <li className="nav-item">
-                <Link
-                  href="/blogcreate"
-                  className="nav-item nav-link
-                                               text-light"
-                >
+                <NavigateLink href="/blogcreate" className="nav-item nav-link text-light">
                   Create new Blog
-                </Link>
+                </NavigateLink>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

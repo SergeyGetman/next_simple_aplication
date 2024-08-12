@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 interface IDataUserInfo {
   email: string;
@@ -13,15 +13,17 @@ interface GlobalInfoState {
 }
 
 const initialState: GlobalInfoState = {
-  name: "",
+  name: '',
   DT: [],
-  dataAvtorized: "",
+  dataAvtorized: {
+    email: '',
+    password: '',
+  },
   avtorizedStop: true,
 };
 
-
 export const getDataSliceInfo = createSlice({
-  name: "globalInfo",
+  name: 'globalInfo',
   initialState,
   reducers: {
     addDataUser(state, action) {
