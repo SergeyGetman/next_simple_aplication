@@ -37,12 +37,12 @@ export async function getStaticProps() {
       .then((data) => {
         return {
           props: {
-            products: data, // Set the fetched data to the 'products' prop
+            products: data,
           },
         };
       });
 
-    return products; // Return the object with 'props' property
+    return products;
   } catch (error) {
     console.error(error);
   }
